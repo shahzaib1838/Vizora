@@ -2,41 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Analytics Dashboard Design System - Professional Data Visualization Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Analytics Theme - Deep Blues & Purples */
+    --background: 210 25% 98%;
+    --foreground: 217 33% 17%;
 
+    /* Dashboard Cards - Clean White with Subtle Shadows */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 217 33% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 217 33% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Analytics Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Professional Purple */
+    --secondary: 252 56% 57%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Light Grays for Subtle Elements */
+    --muted: 210 17% 95%;
+    --muted-foreground: 215 25% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Vibrant Purple */
+    --accent: 252 56% 57%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Performance Indicators */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 76% 46%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    /* Interface Elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    /* Analytics Specific Colors */
+    --analytics-bg: 210 25% 98%;
+    --analytics-card: 0 0% 100%;
+    --analytics-text: 217 33% 17%;
+    --analytics-muted: 215 25% 47%;
+
+    /* Chart Colors */
+    --chart-primary: 217 91% 60%;
+    --chart-secondary: 252 56% 57%;
+    --chart-tertiary: 142 76% 36%;
+    --chart-quaternary: 25 95% 53%;
+    --chart-quinary: 0 84% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(252 56% 57%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 17% 98%));
+    --gradient-bg: linear-gradient(180deg, hsl(210 25% 98%), hsl(210 17% 95%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(217 33% 17% / 0.1), 0 2px 4px -1px hsl(217 33% 17% / 0.06);
+    --shadow-elevated: 0 10px 15px -3px hsl(217 33% 17% / 0.1), 0 4px 6px -2px hsl(217 33% 17% / 0.05);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +97,44 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 217 33% 17%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 217 33% 17%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 217 33% 17%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 91% 70%;
+    --primary-foreground: 217 33% 17%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 252 56% 47%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 32% 25%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 252 56% 47%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217 32% 25%;
+    --input: 217 32% 25%;
+    --ring: 217 91% 70%;
+
+    /* Dark Mode Analytics */
+    --analytics-bg: 217 33% 17%;
+    --analytics-card: 217 32% 22%;
+    --analytics-text: 210 40% 98%;
+    --analytics-muted: 215 20% 65%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 70%), hsl(252 56% 57%));
+    --gradient-card: linear-gradient(145deg, hsl(217 32% 22%), hsl(217 33% 17%));
+    --gradient-bg: linear-gradient(180deg, hsl(217 33% 17%), hsl(217 32% 15%));
   }
 }
 
@@ -100,6 +144,37 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-bg text-foreground font-sans antialiased;
+  }
+}
+
+/* Analytics Dashboard Utilities */
+@layer components {
+  .analytics-card {
+    @apply bg-gradient-card backdrop-blur-sm border border-border/50 rounded-lg shadow-card hover:shadow-elevated transition-all duration-300;
+  }
+  
+  .analytics-metric {
+    @apply text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  .performance-positive {
+    @apply text-success-foreground bg-success rounded-full px-3 py-1 text-sm font-medium;
+  }
+  
+  .performance-negative {
+    @apply text-destructive-foreground bg-destructive rounded-full px-3 py-1 text-sm font-medium;
+  }
+  
+  .chart-container {
+    @apply bg-card/50 backdrop-blur-sm rounded-lg border border-border/30 p-6 animate-fade-in;
+  }
+  
+  .filter-button-active {
+    @apply bg-primary text-primary-foreground shadow-glow;
+  }
+  
+  .upload-area {
+    @apply border-2 border-dashed border-primary/30 rounded-xl p-8 text-center hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-pointer;
   }
 }
